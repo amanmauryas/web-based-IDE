@@ -7,7 +7,6 @@ import ReactGA from "react-ga4";
 ReactGA.initialize("G-QPZYF9G3RE"); // Replace with your Measurement ID
 ReactGA.send("pageview");
 
-
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
