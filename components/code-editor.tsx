@@ -235,7 +235,13 @@ export default function CodeEditor() {
   };
 
   // Function to handle deleting a file
-  const handleDeleteFile = (fileToDelete) => {
+  interface File {
+    name: string;
+    language: string;
+    content: string;
+  }
+
+  const handleDeleteFile = (fileToDelete: File) => {
     const confirmDelete = window.confirm(`Are you sure you want to delete ${fileToDelete.name}?`);
     if (confirmDelete) {
       const updatedFiles = files.filter(file => file.name !== fileToDelete.name);
@@ -248,7 +254,13 @@ export default function CodeEditor() {
   };
 
   // Function to handle renaming a file
-  const handleRenameFile = (fileToRename) => {
+  interface File {
+    name: string;
+    language: string;
+    content: string;
+  }
+
+  const handleRenameFile = (fileToRename: File) => {
     const newName = prompt("Enter new file name:", fileToRename.name);
     if (newName && newName !== fileToRename.name) {
       const updatedFiles = files.map(file =>
