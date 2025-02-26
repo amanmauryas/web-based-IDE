@@ -2,6 +2,11 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { ThemeProvider } from '@/components/theme-provider';
+import ReactGA from "react-ga4";
+
+ReactGA.initialize("G-QPZYF9G3RE"); // Replace with your Measurement ID
+ReactGA.send("pageview");
+
 
 const inter = Inter({ subsets: ['latin'] });
 
