@@ -1,13 +1,9 @@
-"use client";
 
 import './globals.css';
 import type { Metadata } from 'next/types';
 import { Inter } from 'next/font/google';
 import { ThemeProvider } from '@/components/theme-provider';
-import ReactGA from "react-ga4";
-
-ReactGA.initialize("G-QPZYF9G3RE"); // Replace with your Measurement ID
-ReactGA.send("pageview");
+import Analytics from "@/components/analytics";
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -26,6 +22,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <ThemeProvider attribute="data-theme" defaultTheme="system" enableSystem disableTransitionOnChange>
           {children}
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>
