@@ -1,7 +1,7 @@
 "use client";
 
 import './globals.css';
-import type { Metadata } from 'next';
+import type { Metadata } from 'next/types';
 import { Inter } from 'next/font/google';
 import { ThemeProvider } from '@/components/theme-provider';
 import ReactGA from "react-ga4";
